@@ -1,0 +1,65 @@
+* { box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+body {
+  background: linear-gradient(135deg, #eef2ff, #f0fdf4);
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  margin: 0;
+  min-height: 100vh;
+}
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 32px;
+  max-width: 640px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+h2 { text-align: center; margin: 0 0 4px; color: #1e293b; }
+.brand-full { text-align: center; color: #2563eb; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; margin: 0 0 10px; text-transform: uppercase; }
+.subtitle { text-align: center; color: #64748b; font-size: 14px; margin-bottom: 24px; }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.field { display: flex; flex-direction: column; }
+label { font-size: 12px; color: #475569; margin-bottom: 4px; font-weight: 600; }
+input, select {
+  padding: 10px 12px;
+  border: 1px solid #d8dee8;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.15s;
+}
+input:focus, select:focus { border-color: #2563eb; }
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+button:hover { background: #1d4ed8; }
+button:disabled { background: #94a3b8; cursor: not-allowed; }
+#result { margin-top: 22px; text-align: center; }
+.approved, .rejected {
+  padding: 18px;
+  border-radius: 12px;
+  animation: fadeIn 0.3s ease;
+}
+.approved { color: #15803d; background: #dcfce7; }
+.rejected { color: #b91c1c; background: #fee2e2; }
+.approved h3, .rejected h3 { margin: 0 0 8px; }
+.factors { font-size: 13px; margin-top: 10px; color: #475569; text-align: left; }
+.factors ul { margin: 6px 0 0; padding-left: 18px; }
+.error { color: #b91c1c; font-size: 14px; }
+@keyframes fadeIn { from {opacity:0; transform: translateY(6px);} to {opacity:1; transform: translateY(0);} }

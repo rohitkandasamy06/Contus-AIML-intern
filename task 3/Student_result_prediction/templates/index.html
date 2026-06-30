@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Result Predictor</title>
+<style>
+  :root{
+    --paper:#F7F3E9; --ink:#1B2A4A; --rule:#C9BFA8;
+    --amber:#D9A441; --pass:#4F7942; --fail:#B33A3A; --card:#FFFEFA;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper);
+    background-image:repeating-linear-gradient(transparent 0 38px, var(--rule) 38px 39px);
+    font-family:'Iowan Old Style','Palatino Linotype',Georgia,serif;
+    color:var(--ink); padding:40px 16px 80px;
+  }
+  .wrap{max-width:760px;margin:0 auto;}
+  header{border-bottom:3px solid var(--ink);padding-bottom:14px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:baseline;}
+  header h1{font-size:1.9rem;margin:0;letter-spacing:.5px;}
+  header .tag{font-family:'Courier New',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--amber);border:1px solid var(--amber);padding:3px 8px;border-radius:2px;white-space:nowrap;}
+  .sub{font-family:'Courier New',monospace;font-size:.8rem;color:#665e4d;margin:0 0 26px;}
+  form{background:var(--card);border:1px solid var(--rule);box-shadow:0 2px 0 var(--rule);padding:28px 28px 8px;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;}
+  @media (max-width:560px){ .grid{grid-template-columns:1fr;} }
+  .field{display:flex;flex-direction:column;}
+  .field label{font-family:'Courier New',monospace;font-size:.72rem;text-transform:uppercase;letter-spacing:1px;color:#5a5240;margin-bottom:6px;}
+  .field input, .field select{border:none;border-bottom:1.5px solid var(--ink);background:transparent;font-family:inherit;font-size:1rem;padding:5px 2px 7px;color:var(--ink);}
+  .field input:focus, .field select:focus{outline:none;border-bottom:1.5px solid var(--amber);}
+  .actions{margin:28px 0 22px;display:flex;justify-content:flex-end;}
+  button{background:var(--ink);color:var(--paper);border:none;font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:1.5px;font-size:.82rem;padding:12px 26px;cursor:pointer;transition:background .15s ease;}
+  button:hover{background:#2c3f6b;}
+  button:focus-visible{outline:2px solid var(--amber); outline-offset:2px;}
+  .result{margin-top:30px;background:var(--card);border:1px solid var(--rule);padding:28px;display:flex;gap:28px;align-items:center;animation:stampIn .35s ease-out;}
+  @media (prefers-reduced-motion: reduce){ .result{animation:none;} }
+  @keyframes stampIn{ from{ transform:scale(1.15) rotate(-4deg); opacity:0; } to{ transform:scale(1) rotate(-4deg); opacity:1; } }
+  .stamp{flex:0 0 auto;width:110px;height:110px;border-radius:50%;border:4px solid currentColor;display:flex;align-items:center;justify-content:center;font-family:'Courier New',monospace;font-weight:bold;font-size:2.1rem;transform:rotate(-4deg);}
+  .stamp.pass{color:var(--pass);}
+  .stamp.fail{color:var(--fail);}
+  .details{flex:1;}
+  .details .score{font-size:2.4rem;margin:0 0 4px;}
+  .details .verdict{font-family:'Courier New',monospace;text-transform:uppercase;letter-spacing:1.5px;font-size:.95rem;margin:0;}
+  .details .verdict.pass{color:var(--pass);}
+  .details .verdict.fail{color:var(--fail);}
+  .details .note{font-size:.85rem;color:#5a5240;margin-top:8px;}
+  .error{margin-top:24px;border-left:4px solid var(--fail);background:var(--card);padding:14px 18px;font-family:'Courier New',monospace;font-size:.85rem;color:var(--fail);}
+  footer{margin-top:36px;font-family:'Courier New',monospace;font-size:.72rem;color:#8a8068;text-align:center;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Student Result Predictor</h1>
+    <span class="tag">ML Model</span>
+  </header>
+  <p class="sub">Enter the details below — the trained model estimates the likely final score, pass/fail status, and grade.</p>
+
+  <form method="POST" action="/">
+    <div class="grid">
+      <div class="field">
+        <label for="study_hours_per_day">Study hours / day (0–12)</label>
+        <input type="number" step="0.1" min="0" max="12" name="study_hours_per_day" id="study_hours_per_day" value="{{ form_data.get('study_hours_per_day', '') }}" required>
+      </div>
+      <div class="field">
+        <label for="attendance_percent">Attendance % (0–100)</label>
+        <input type="number" step="0.1" min="0" max="100" name="attendance_percent" id="attendance_percent" value="{{ form_data.get('attendance_percent', '') }}" required>
+      </div>
+      <div class="field">
+        <label for="previous_score">Previous exam score (0–100)</label>
+        <input type="number" step="0.1" min="0" max="100" name="previous_score" id="previous_score" value="{{ form_data.get('previous_score', '') }}" required>
+      </div>
+      <div class="field">
+        <label for="assignments_completed_percent">Assignments completed % (0–100)</label>
+        <input type="number" step="0.1" min="0" max="100" name="assignments_completed_percent" id="assignments_completed_percent" value="{{ form_data.get('assignments_completed_percent', '') }}" required>
+      </div>
+      <div class="field">
+        <label for="sleep_hours">Average sleep hours (0–12)</label>
+        <input type="number" step="0.1" min="0" max="12" name="sleep_hours" id="sleep_hours" value="{{ form_data.get('sleep_hours', '') }}" required>
+      </div>
+      <div class="field">
+        <label for="extra_activities">Extra-curricular activities</label>
+        <select name="extra_activities" id="extra_activities" required>
+          <option value="" disabled {% if form_data.get('extra_activities', '') == '' %}selected{% endif %}>Choose...</option>
+          <option value="1" {% if form_data.get('extra_activities')|string == '1' %}selected{% endif %}>Yes</option>
+          <option value="0" {% if form_data.get('extra_activities')|string == '0' %}selected{% endif %}>No</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="parental_support">Parental support level</label>
+        <select name="parental_support" id="parental_support" required>
+          <option value="" disabled {% if form_data.get('parental_support', '') == '' %}selected{% endif %}>Choose...</option>
+          <option value="3" {% if form_data.get('parental_support')|string == '3' %}selected{% endif %}>High</option>
+          <option value="2" {% if form_data.get('parental_support')|string == '2' %}selected{% endif %}>Medium</option>
+          <option value="1" {% if form_data.get('parental_support')|string == '1' %}selected{% endif %}>Low</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="internet_access">Internet access at home</label>
+        <select name="internet_access" id="internet_access" required>
+          <option value="" disabled {% if form_data.get('internet_access', '') == '' %}selected{% endif %}>Choose...</option>
+          <option value="1" {% if form_data.get('internet_access')|string == '1' %}selected{% endif %}>Yes</option>
+          <option value="0" {% if form_data.get('internet_access')|string == '0' %}selected{% endif %}>No</option>
+        </select>
+      </div>
+    </div>
+    <div class="actions">
+      <button type="submit">Predict result</button>
+    </div>
+  </form>
+
+  {% if result %}
+    {% if result.error %}
+      <div class="error">ERROR — {{ result.error }}</div>
+    {% else %}
+      <div class="result">
+        <div class="stamp {{ 'pass' if result.pass_fail == 'Pass' else 'fail' }}">{{ result.grade }}</div>
+        <div class="details">
+          <p class="score">{{ result.predicted_score }} / 100</p>
+          <p class="verdict {{ 'pass' if result.pass_fail == 'Pass' else 'fail' }}">{{ result.pass_fail }}</p>
+          <p class="note">Predicted using a Random Forest model trained on study habits, attendance, and background factors. Treat this as guidance, not a guarantee.</p>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+
+  <footer>trained on 1,500 synthetic student records · random forest regressor</footer>
+</div>
+</body>
+</html>

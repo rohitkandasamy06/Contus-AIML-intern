@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAPS | Loan Approval Prediction System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+  <h2>🏦 LAPS</h2>
+  <p class="brand-full">Loan Approval Prediction System</p>
+  <p class="subtitle">Fill in the details below to check your loan eligibility instantly</p>
+
+  <form id="loanForm">
+    <div class="grid">
+      <div class="field">
+        <label>Gender</label>
+        <select name="gender" required>
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Married</label>
+        <select name="married" required>
+          <option value="">Select</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Dependents</label>
+        <select name="dependents" required>
+          <option value="">Select</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Education</label>
+        <select name="education" required>
+          <option value="">Select</option>
+          <option>Graduate</option>
+          <option>Not Graduate</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Self Employed</label>
+        <select name="self_employed" required>
+          <option value="">Select</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Property Area</label>
+        <select name="property_area" required>
+          <option value="">Select</option>
+          <option>Urban</option>
+          <option>Semiurban</option>
+          <option>Rural</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="field">
+        <label>Applicant Income (₹/yr)</label>
+        <input name="applicant_income" type="number" min="0" required>
+      </div>
+      <div class="field">
+        <label>Coapplicant Income (₹/yr)</label>
+        <input name="coapplicant_income" type="number" min="0" required>
+      </div>
+      <div class="field">
+        <label>Loan Amount Requested</label>
+        <input name="loan_amount" type="number" min="0" required>
+      </div>
+      <div class="field">
+        <label>Loan Term (months)</label>
+        <input name="loan_term_months" type="number" min="1" required>
+      </div>
+      <div class="field">
+        <label>Credit Score (300-900)</label>
+        <input name="credit_score" type="number" min="300" max="900" required>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="field">
+        <label>Residential Assets Value</label>
+        <input name="residential_assets_value" type="number" min="0" required>
+      </div>
+      <div class="field">
+        <label>Commercial Assets Value</label>
+        <input name="commercial_assets_value" type="number" min="0" required>
+      </div>
+      <div class="field">
+        <label>Bank Assets Value</label>
+        <input name="bank_assets_value" type="number" min="0" required>
+      </div>
+    </div>
+
+    <button type="submit" id="submitBtn">Check Eligibility</button>
+  </form>
+
+  <div id="result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
