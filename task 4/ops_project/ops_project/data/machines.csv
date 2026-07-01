@@ -1,0 +1,7 @@
+machine_id,machine_code,machine_name,line_id,install_year,status
+1,M-01,CNC Press Line A1,Line-A,2019,Active
+2,M-02,CNC Press Line A2,Line-A,2020,Active
+3,M-03,Forging Unit B1,Line-B,2014,Active
+4,M-04,Forging Unit B2,Line-B,2021,Active
+5,M-05,Assembly Robot C1,Line-C,2022,Active
+6,M-06,Assembly Robot C2,Line-C,2018,Active

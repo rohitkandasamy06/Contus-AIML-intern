@@ -1,0 +1,91 @@
+customer_id,customer_name,customer_type,city,state,latitude,longitude
+1,"Choudhury, Bakshi and Maharaj Auto Works",Service Center,Mumbai,Maharashtra,19.132039,72.830548
+2,Kapoor and Sons Motors,Service Center,Coimbatore,Tamil Nadu,11.019673,76.975774
+3,"Chaudry, Chahal and Sami Garage",Service Center,Kochi,Kerala,9.938676,76.305339
+4,Balan Inc Motors,OEM Dealer,Kochi,Kerala,9.89541,76.322856
+5,Kaul PLC Motors,Retail Distributor,Chennai,Tamil Nadu,13.127508,80.314749
+6,"Bala, Issac and Saini Service",OEM Dealer,Vijayawada,Andhra Pradesh,16.431056,80.619599
+7,Sen PLC Motors,Service Center,Vijayawada,Andhra Pradesh,16.456668,80.720494
+8,Ahuja-Dutta Service,OEM Dealer,Delhi,Delhi,28.727708,77.03166
+9,"Sami, Oak and Mall Motors",Service Center,Madurai,Tamil Nadu,10.003344,78.089855
+10,Kale LLC Garage,OEM Dealer,Delhi,Delhi,28.727397,77.142905
+11,Chanda Group Service,Service Center,Delhi,Delhi,28.754143,77.118556
+12,Parmer LLC Motors,OEM Dealer,Mysuru,Karnataka,12.294382,76.705041
+13,"Lalla, Bassi and Sharaf Garage",Service Center,Mysuru,Karnataka,12.296026,76.68553
+14,"Dash, Radhakrishnan and Brar Motors",Service Center,Chennai,Tamil Nadu,13.083843,80.26547
+15,"Memon, Pathak and Handa Spares",Service Center,Chennai,Tamil Nadu,13.108626,80.332427
+16,"Boase, Bath and Kari Garage",Service Center,Hyderabad,Telangana,17.31919,78.522524
+17,Buch-Kaul Spares,OEM Dealer,Pune,Maharashtra,18.500835,73.796371
+18,Rai LLC Garage,Service Center,Mysuru,Karnataka,12.297669,76.717907
+19,Patla-Gaba Service,Service Center,Hyderabad,Telangana,17.35462,78.433938
+20,Pant-Kadakia Spares,OEM Dealer,Chennai,Tamil Nadu,13.091107,80.197
+21,"Loke, Bora and Garg Service",Service Center,Bengaluru,Karnataka,12.930062,77.610936
+22,"Konda, Gade and Shere Service",Service Center,Ahmedabad,Gujarat,22.999312,72.651199
+23,Madan-Kanda Garage,Retail Distributor,Delhi,Delhi,28.653663,77.032822
+24,"Nair, Bhalla and Karnik Service",OEM Dealer,Coimbatore,Tamil Nadu,11.07524,76.91625
+25,Mutti Group Garage,Service Center,Delhi,Delhi,28.770538,77.140661
+26,Bhatti-Kakar Service,Retail Distributor,Mysuru,Karnataka,12.369744,76.662404
+27,"Murty, Kala and Tata Auto Works",Service Center,Mumbai,Maharashtra,19.136873,72.837542
+28,Shanker-Dhar Garage,OEM Dealer,Bengaluru,Karnataka,12.976131,77.524867
+29,Dewan-Koshy Service,Service Center,Kochi,Kerala,9.861685,76.298763
+30,"Yohannan, Lall and Sangha Garage",Service Center,Vijayawada,Andhra Pradesh,16.453539,80.659427
+31,"Rastogi, Pathak and Kanda Auto Works",Service Center,Madurai,Tamil Nadu,9.848513,78.180511
+32,Upadhyay Group Motors,Service Center,Vijayawada,Andhra Pradesh,16.561406,80.636942
+33,Batta Inc Spares,OEM Dealer,Mysuru,Karnataka,12.228947,76.699151
+34,Dutta Ltd Garage,Service Center,Kochi,Kerala,9.913581,76.244048
+35,Bhatt-Rajan Garage,Service Center,Chennai,Tamil Nadu,13.032554,80.316885
+36,Sidhu-Wadhwa Motors,Service Center,Kochi,Kerala,9.881113,76.217968
+37,Apte-Contractor Garage,Retail Distributor,Mumbai,Maharashtra,19.056363,72.863491
+38,"Yadav, Loke and Oak Service",Retail Distributor,Delhi,Delhi,28.716214,77.152856
+39,Memon Group Garage,OEM Dealer,Chennai,Tamil Nadu,13.126226,80.307625
+40,Setty Inc Garage,Service Center,Vijayawada,Andhra Pradesh,16.506355,80.596553
+41,"Lall, Tella and Gokhale Motors",Service Center,Madurai,Tamil Nadu,9.919709,78.172881
+42,"Cherian, Misra and Tripathi Motors",Retail Distributor,Hyderabad,Telangana,17.311007,78.516592
+43,"Issac, Dua and Prakash Auto Works",Retail Distributor,Mysuru,Karnataka,12.254011,76.706038
+44,Zacharia PLC Service,Service Center,Hyderabad,Telangana,17.336093,78.490894
+45,Naik Group Auto Works,Retail Distributor,Vijayawada,Andhra Pradesh,16.445749,80.684552
+46,Choudhury LLC Service,Service Center,Coimbatore,Tamil Nadu,10.951932,76.971777
+47,Khatri-Bhardwaj Auto Works,OEM Dealer,Coimbatore,Tamil Nadu,11.0239,76.972833
+48,Brar Inc Auto Works,OEM Dealer,Coimbatore,Tamil Nadu,11.03774,76.907478
+49,"Sunder, Biswas and Walia Spares",Retail Distributor,Kochi,Kerala,9.902883,76.223415
+50,Dave Ltd Service,Service Center,Vijayawada,Andhra Pradesh,16.438494,80.581418
+51,Gandhi-Lanka Spares,OEM Dealer,Mumbai,Maharashtra,19.117344,72.850091
+52,"Sampath, Kakar and Zacharia Service",Retail Distributor,Delhi,Delhi,28.761441,77.147126
+53,"Iyer, Muni and Rastogi Motors",Retail Distributor,Chennai,Tamil Nadu,13.148542,80.224093
+54,"Prakash, Sarma and Varughese Spares",OEM Dealer,Chennai,Tamil Nadu,13.096474,80.244234
+55,Dara-Kota Motors,OEM Dealer,Madurai,Tamil Nadu,9.979215,78.123619
+56,Bhatt LLC Spares,OEM Dealer,Pune,Maharashtra,18.493816,73.878593
+57,Karpe PLC Spares,Retail Distributor,Mysuru,Karnataka,12.347487,76.654772
+58,Amble Inc Service,Service Center,Ahmedabad,Gujarat,23.051319,72.554082
+59,"Bhargava, Karnik and Bir Service",OEM Dealer,Madurai,Tamil Nadu,9.986941,78.052
+60,Narayanan Inc Service,OEM Dealer,Coimbatore,Tamil Nadu,11.076135,76.978086
+61,"Khanna, Mallick and Sunder Service",Service Center,Delhi,Delhi,28.670859,77.059516
+62,Zacharia and Sons Spares,OEM Dealer,Chennai,Tamil Nadu,13.096549,80.311743
+63,"Solanki, Kibe and Solanki Service",Service Center,Vijayawada,Andhra Pradesh,16.451428,80.602494
+64,Gupta-Chandra Garage,Service Center,Coimbatore,Tamil Nadu,10.975223,76.919803
+65,Sankar LLC Garage,OEM Dealer,Coimbatore,Tamil Nadu,10.977624,76.881637
+66,Roy-Sibal Garage,Service Center,Delhi,Delhi,28.68926,77.142043
+67,"Bhagat, Chaudhari and Bhat Spares",Service Center,Hyderabad,Telangana,17.343024,78.556395
+68,Nori-Chopra Motors,Service Center,Vijayawada,Andhra Pradesh,16.433617,80.67899
+69,Handa and Sons Motors,Retail Distributor,Pune,Maharashtra,18.565249,73.779575
+70,"Sen, Dey and Sami Spares",Service Center,Chennai,Tamil Nadu,13.085941,80.223209
+71,Mallick Group Motors,Service Center,Ahmedabad,Gujarat,22.956641,72.630798
+72,Borra Group Auto Works,OEM Dealer,Kochi,Kerala,9.924101,76.238561
+73,"Chaudhari, Bedi and Zachariah Garage",Service Center,Madurai,Tamil Nadu,9.968015,78.080444
+74,Chander and Sons Service,OEM Dealer,Pune,Maharashtra,18.521852,73.806045
+75,Ray Group Service,Service Center,Kochi,Kerala,9.986789,76.255216
+76,Kala-Rattan Garage,OEM Dealer,Madurai,Tamil Nadu,9.944589,78.197227
+77,Gala Group Service,OEM Dealer,Chennai,Tamil Nadu,13.021233,80.239341
+78,Ramakrishnan LLC Garage,OEM Dealer,Delhi,Delhi,28.781724,77.147339
+79,Mangal-Sampath Service,OEM Dealer,Mumbai,Maharashtra,19.134053,72.943736
+80,"Sur, Dubey and Gupta Service",Service Center,Chennai,Tamil Nadu,13.036614,80.293922
+81,Kalla-Bhardwaj Motors,Service Center,Chennai,Tamil Nadu,13.019096,80.24999
+82,"Bhat, Murthy and Bhandari Service",Service Center,Chennai,Tamil Nadu,13.083884,80.34961
+83,Sood PLC Motors,Service Center,Mysuru,Karnataka,12.261522,76.588484
+84,"Dugar, Bhandari and Trivedi Auto Works",Service Center,Mumbai,Maharashtra,19.154703,72.890964
+85,Grewal Inc Spares,Service Center,Ahmedabad,Gujarat,23.055486,72.591204
+86,"Bir, Keer and Raval Garage",Retail Distributor,Ahmedabad,Gujarat,23.071791,72.630533
+87,Koshy PLC Spares,OEM Dealer,Kochi,Kerala,9.947946,76.28335
+88,"Baral, Bumb and Saini Garage",Service Center,Delhi,Delhi,28.671388,77.108142
+89,"Virk, Mutti and Lal Garage",Service Center,Kochi,Kerala,10.00351,76.227012
+90,Murthy and Sons Garage,Service Center,Mysuru,Karnataka,12.219204,76.63947

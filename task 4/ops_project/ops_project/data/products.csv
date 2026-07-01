@@ -1,0 +1,13 @@
+product_id,product_code,name,category,unit_cost,unit_price,production_time_mins
+1,BRK-001,Ceramic Brake Pad Set,Brake System,320,650,25
+2,BRK-002,Disc Brake Rotor,Brake System,480,920,35
+3,ENG-001,Piston Assembly,Engine,610,1150,45
+4,ENG-002,Engine Gasket Kit,Engine,150,320,15
+5,ENG-003,Timing Belt,Engine,280,540,20
+6,ELE-001,Alternator Unit,Electrical,1450,2600,60
+7,ELE-002,Starter Motor,Electrical,1100,2050,50
+8,ELE-003,Spark Plug Set (4pc),Electrical,90,220,10
+9,TRN-001,Clutch Plate,Transmission,540,980,40
+10,TRN-002,Gearbox Synchronizer Ring,Transmission,390,760,30
+11,SUS-001,Shock Absorber,Suspension,720,1320,38
+12,SUS-002,Control Arm Bushing Kit,Suspension,210,410,18
